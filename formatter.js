@@ -23,22 +23,8 @@
 export function formatGrid(grid2D) {
   // TODO: Declare variables (rowStrings, formattedOutput)
   // TODO: Implement formatting logic
+  const rowStrings = grid2D.map(row => row.join(''));
+  const formattedOutput = rowStrings.join('\n');
+  return formattedOutput;
 }
 
-//TEST CASES
-
-const mockGrid = [
-  ['c', 'a', 's', 'a'],
-  ['i', '.', '.', 'l'],
-  ['a', 'n', 't', 'a'],
-  ['o', '.', '.', 'n']
-];
-
-const result = formatGrid(mockGrid);
-console.log("Formatted Output:\n" + result);
-
-// Formatted Output:
-// casa
-// i..l
-// anta
-// o..n
