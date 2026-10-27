@@ -28,6 +28,16 @@
 export function parseGrid(puzzleString) {
   // TODO: Declare variables (rows, grid2D, expectedLength, i, j)
   // TODO: Implement parsing and validation logic
+  const matches = /\S+/g;
+  const rows = puzzleString.match(matches);
+  let array = [];
+  for (let i = 0; i < rows.length; i++) {
+    array[i] = [];
+    for (let j = 0; j < rows[i].length; j++) {
+      array[i][j] = rows[i][j];
+    }
+  }
+  return array
 }
 
 
