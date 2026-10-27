@@ -34,3 +34,20 @@ export function extractSlots(grid2D) {
   // TODO: Declare variables (slots, rowCount, colCount, row, col, len, r, c)
   // TODO: Implement slot extraction logic
 }
+
+//TEST CASES
+
+// Mock 2D Grid input
+const mockGrid = [
+  ['2', '0', '0', '1'],
+  ['0', '.', '.', '0']
+];
+
+const result = extractSlots(mockGrid);
+console.log("Extracted Slots Output:", result);
+
+// Extracted Slots Output: [
+//   { row: 0, col: 0, direction: 'horizontal', length: 4 },
+//   { row: 0, col: 0, direction: 'vertical', length: 2 },
+//   { row: 0, col: 3, direction: 'vertical', length: 2 }
+// ]

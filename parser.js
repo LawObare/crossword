@@ -29,3 +29,18 @@ export function parseGrid(puzzleString) {
   // TODO: Declare variables (rows, grid2D, expectedLength, i, j)
   // TODO: Implement parsing and validation logic
 }
+
+
+
+
+//TEST CASES
+
+// Test Scenario: Valid rectangular string input
+const rawInput = "2001\n0..0";
+const result = parseGrid(rawInput);
+
+console.log("Input:", JSON.stringify(rawInput));
+console.log("Parsed 2D Array Output:", result);
+
+// Input: "2001\n0..0"
+// Parsed 2D Array Output: [ [ '2', '0', '0', '1' ], [ '0', '.', '.', '0' ] ]

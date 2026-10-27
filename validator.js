@@ -32,3 +32,22 @@ export function isValidPlacement(word, slot, grid2D) {
   // TODO: Declare variables (i, currRow, currCol, cellChar)
   // TODO: Implement placement validation logic
 }
+
+//TEST CASES
+
+const mockGrid = [
+  ['c', '.', '.', '.'],
+  ['.', '.', '.', '.']
+];
+const slot = { row: 0, col: 0, direction: 'horizontal', length: 4 };
+
+// Test matching intersection
+const test1 = isValidPlacement('casa', slot, mockGrid);
+// Test conflicting intersection
+const test2 = isValidPlacement('data', slot, mockGrid);
+
+console.log("Test 1 (Matching 'c'):", test1);
+console.log("Test 2 (Conflicting 'd'):", test2);
+
+// Test 1 (Matching 'c'): true
+// Test 2 (Conflicting 'd'): false

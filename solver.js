@@ -41,3 +41,27 @@ export function backtrack(slotIndex, slots, words, grid2D, solutions, usedWords)
   // TODO: Declare variables (currentSlot, i, word, backupCells)
   // TODO: Implement recursive backtracking logic
 }
+
+const mockGrid = [
+  ['2', '0', '0', '1'],
+  ['0', '.', '.', '0'],
+  ['1', '0', '0', '0'],
+  ['0', '.', '.', '0']
+];
+const mockSlots = [
+  { row: 0, col: 0, direction: 'horizontal', length: 4 },
+  { row: 0, col: 0, direction: 'vertical', length: 4 },
+  { row: 0, col: 3, direction: 'vertical', length: 4 },
+  { row: 2, col: 0, direction: 'horizontal', length: 4 }
+];
+const mockWords = ["casa", "alan", "ciao", "anta"];
+const solutions = [];
+const usedWords = new Set();
+
+backtrack(0, mockSlots, mockWords, mockGrid, solutions, usedWords);
+
+console.log("Total Solutions Found:", solutions.length);
+console.log("Solved First Row:", solutions[0][0].join(''));
+
+// Total Solutions Found: 1
+// Solved First Row: casa
