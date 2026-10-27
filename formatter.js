@@ -1,5 +1,3 @@
-/*Kolaka*/
-
 /**
  * File: formatter.js
  * 
@@ -22,3 +20,7 @@
  * 2. Combine all row strings together using newline separators (\n).
  * 3. Return the final formatted multi-line string (formattedOutput).
  */
+export function formatGrid(grid2D) {
+  // TODO: Declare variables (rowStrings, formattedOutput)
+  // TODO: Implement formatting logic
+}

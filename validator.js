@@ -28,3 +28,7 @@
  *      - If it already contains an alphabetic letter, check if it matches word[i]. If it does not match, return false (conflict).
  * 3. If all characters pass validation checks, return true.
  */
+export function isValidPlacement(word, slot, grid2D) {
+  // TODO: Declare variables (i, currRow, currCol, cellChar)
+  // TODO: Implement placement validation logic
+}

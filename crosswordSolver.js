@@ -1,5 +1,3 @@
-/*Kolaka*/
-
 /**
  * File: crosswordSolver.js
  * 
@@ -28,3 +26,12 @@
  *    - If solutions.length === 1, pass the single solution grid to formatGrid(...) and print the resulting string to the console.
  *    - If solutions.length === 0 or solutions.length > 1, print 'Error' to the console.
  */
+import { parseGrid } from './parser.js';
+import { extractSlots } from './slotExtractor.js';
+import { backtrack } from './solver.js';
+import { formatGrid } from './formatter.js';
+
+export function crosswordSolver(emptyPuzzle, words) {
+  // TODO: Declare variables (grid2D, slots, solutions, usedWords)
+  // TODO: Implement orchestration logic
+}

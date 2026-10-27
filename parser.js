@@ -25,3 +25,7 @@
  * 4. Validate that all characters within the grid belong strictly to the allowed set (0–9, ., or \n).
  * 5. Map each row string into an array of individual character strings and return the 2D array.
  */
+export function parseGrid(puzzleString) {
+  // TODO: Declare variables (rows, grid2D, expectedLength, i, j)
+  // TODO: Implement parsing and validation logic
+}

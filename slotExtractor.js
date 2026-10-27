@@ -30,3 +30,7 @@
  *    - Vertical Check: Trace downward from row + 1 using pointer r until hitting a grid boundary or a dot (.). If the calculated length (len) is greater than 1, push a vertical slot object to your slots list.
  * 3. Return the complete list of extracted slot objects.
  */
+export function extractSlots(grid2D) {
+  // TODO: Declare variables (slots, rowCount, colCount, row, col, len, r, c)
+  // TODO: Implement slot extraction logic
+}

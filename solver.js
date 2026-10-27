@@ -1,5 +1,3 @@
-/*Kolaka*/
-
 /**
  * File: solver.js
  * 
@@ -39,4 +37,7 @@
  *      - Recursively call backtrack(slotIndex + 1, slots, words, grid2D, solutions, usedWords).
  *      - Rollback (Backtrack): Restore the modified grid cells using backupCells to their original state and unmark the word as used so alternative combinations can be explored.
  */
-
+export function backtrack(slotIndex, slots, words, grid2D, solutions, usedWords) {
+  // TODO: Declare variables (currentSlot, i, word, backupCells)
+  // TODO: Implement recursive backtracking logic
+}
