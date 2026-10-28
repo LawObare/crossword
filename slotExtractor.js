@@ -1,20 +1,20 @@
 /**
  * File: slotExtractor.js
- * 
+ *
  * Role & Objective:
- * Scans the 2D grid matrix cell by cell to identify word starting positions 
+ * Scans the 2D grid matrix cell by cell to identify word starting positions
  * and trace their horizontal and vertical lengths.
- * 
+ *
  * Parameters:
  * - grid2D (Array of Arrays of Strings): The parsed grid structure.
- * 
+ *
  * Return Value:
  * - Returns an Array of Objects representing all valid slots. Each slot object contains:
  *   - row (Number): Starting row index.
  *   - col (Number): Starting column index.
  *   - direction (String): Either 'horizontal' or 'vertical'.
  *   - length (Number): The exact character length of the slot.
- * 
+ *
  * Variables to Declare:
  * - slots (Array of Objects): The master collection storing all discovered slot objects.
  * - rowCount (Number): Total number of rows in grid2D (grid2D.length).
@@ -22,7 +22,7 @@
  * - row, col (Numbers): Loop variables tracking the current cell coordinates during grid iteration.
  * - len (Number): Working variable used to measure the length of a horizontal or vertical word slot.
  * - r, c (Numbers): Internal pointers used to scan ahead rightward or downward when measuring slot lengths.
- * 
+ *
  * Expected Behavior & Logic:
  * 1. Iterate through every coordinate (row, col) in grid2D.
  * 2. When a cell contains a digit greater than 0:
@@ -31,8 +31,45 @@
  * 3. Return the complete list of extracted slot objects.
  */
 export function extractSlots(grid2D) {
-  // TODO: Declare variables (slots, rowCount, colCount, row, col, len, r, c)
-  // TODO: Implement slot extraction logic
+  let slots = [];
+  let rowCount = grid2D.length;
+  let colCount;
+  if (rowCount > 0) {
+    colCount = grid2D[0].length;
+  } else {
+    colCount = 0
+  }
+  let row, col, len, r, c;
+
+  for (row = 0; row < rowCount; row++) {
+    for (col = 0; col < colCount; col++) {
+      let cellValue = parseInt(grid2D[row][col], 10);
+
+      if (!isNaN(cellValue) && cellValue > 0) {
+        len = 1;
+        c = col + 1;
+        while (c < colCount && grid2D[row][c] !== '.') {
+          len++;
+          c++;
+        }
+        if (len > 1) {
+          slots.push({ row: row, col: col, direction: 'horizontal', length: len });
+        }
+        len = 1;
+        r = row + 1;
+        while (r < rowCount && grid2D[r][col] !== '.') {
+          len++;
+          r++;
+        }
+        if (len > 1) {
+          slots.push({ row: row, col: col, direction: 'vertical', length: len });
+        }
+
+      }
+    }
+  }
+
+  return slots;
 }
 
 //TEST CASES
